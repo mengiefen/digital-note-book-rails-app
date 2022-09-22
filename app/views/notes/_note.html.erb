@@ -1,0 +1,18 @@
+<div id="<%= dom_id note %>" class="note-wrapper" >
+  <p class="bg-yellow-200 flex items-center p-2 cursor-pointer">
+    <strong class="block font-medium">
+      <%= note.title %>
+    </strong>
+  </p>
+
+  <p class="p-2 ">   
+    <%= note.text %>
+  </p>
+
+  <% if action_name != "show" %>
+  <div class="absolute w-100 bottom-0 right-2 gap-2">
+    <%= link_to "Show", note, class: "btn-show" %>
+    <%= link_to 'Edit', edit_note_path(note), class: "btn-edit" %>
+  </div>
+  <% end %>
+</div>

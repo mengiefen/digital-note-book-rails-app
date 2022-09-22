@@ -1,0 +1,16 @@
+
+<header class="fixed top-0 left-0 w-[100vw] py-1 z-10 bg-gray-50
+flex justify-between items-center shadow-md px-5">         
+  <div class="logo w-14 h-14 border-2 border-blue-100 shadow-sm rounded-full p-1">
+    <%= link_to image_tag("logo.png"), root_path %>
+  </div>
+        
+  <div class="header-right">           
+    <ul class="flex flex-row gap-2">
+      <li><%= link_to "Home", root_path, class:"menu-link" %></li>
+      <li><%= link_to "Notes", notes_path , class:"menu-link"%></li>
+      <li><%= link_to "Insights", insights_path, class:"menu-link" %></li>
+      <li><%= link_to "Literatures", literatures_path , class:"menu-link"%></li>
+    </ul>
+  </div>        
+</header>

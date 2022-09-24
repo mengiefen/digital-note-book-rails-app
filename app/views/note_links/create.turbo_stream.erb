@@ -1,0 +1,7 @@
+<% @notes.each do |note| %>
+  <%= turbo_stream.update "note=#{note.id}" do %>
+    <% if note.note.present? %>
+      <div class="note-links"><%= note.note.map(&:id).join(", ") %> </div>
+    <% end %>
+  <% end %>
+<% end %> 

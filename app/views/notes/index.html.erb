@@ -8,7 +8,7 @@
     <%= link_to 'New note', new_note_path, class: "btn blue-green" %>
   </div>
 
-  <div id="notes" class="notes-container">
+  <div id="notes" class="notes-container" data-controller="notes">
     <%= render @notes %>
   </div>
 </div>

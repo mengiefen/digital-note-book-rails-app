@@ -1,4 +1,9 @@
-<div id="<%= dom_id note %>" class="note-wrapper" >
+<div id="<%= dom_id note %>" class="note-wrapper" draggable="true"
+  data-notes-target="note"
+  data-action="dragstart->notes#dragStart dragend->notes#dragEnd
+              drop->notes#drop dragenter->notes#dragEnter
+              dragleave->notes#dragLeave dragover->notes#dragOver"
+  drag-id="<%= note.id %>" >
   <p class="bg-yellow-200 flex items-center p-2 cursor-pointer">
     <strong class="block font-medium">
       <%= note.title %>
